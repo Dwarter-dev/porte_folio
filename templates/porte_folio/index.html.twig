@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Port-Folio Steven Da Costa {% endblock %}
+
+{% block body %}
+  <header class="" id="porte_folio" >
+    <div id="header-img"></div>
+    <h1>Steven Da Costa</h1>
+    <h2>Développeur Web et Web Mobile</h2>
+  </header>
+
+  <main class="container-fluid"></main>
+
+  <div class="row">
+    {% for projet in projets %}
+      <div class="col-4 p-3">
+        <div class="card">
+          <img src="{{ 'img/' ~ projet.img }}" class="card-img-top" alt="Photo principale">
+          <div class="card-body">
+            <h5 class="card-title"></h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">An item</li>
+            <li class="list-group-item">A second item</li>
+            <li class="list-group-item">A third item</li>
+          </ul>
+          <div class="card-body text-center">
+            <a href="#" class="btn btn-outline-secondary">Voir Plus</a>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+  </div>
+{% endblock %}
