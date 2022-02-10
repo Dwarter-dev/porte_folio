@@ -3,7 +3,7 @@
 {% block title %}Port-Folio Steven Da Costa {% endblock %}
 
 {% block body %}
-  <header class="" id="porte_folio" >
+  <header class="" id="porte_folio">
     <div id="header-img"></div>
     <h1>Steven Da Costa</h1>
     <h2>Développeur Web et Web Mobile</h2>
@@ -15,7 +15,7 @@
     {% for projet in projets %}
       <div class="col-4 p-3">
         <div class="card">
-          <img src="{{ 'img/' ~ projet.img }}" class="card-img-top" alt="Photo principale">
+          <img src="{{ 'img/' ~ projet.img }}" class="card-img-top" alt="Photo principale" id="card">
           <div class="card-body">
             <h5 class="card-title">{{ projet.nomprojet}}</h5>
           </div>
