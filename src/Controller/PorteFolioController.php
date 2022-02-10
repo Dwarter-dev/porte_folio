@@ -9,7 +9,7 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class PorteFolioController extends AbstractController
 {
-    #[Route('/porte/folio', name: 'porte_folio')]
+    #[Route('/', name: 'porte_folio')]
     public function index(ProjetRepository $projetRepository): Response
     {
         $projet = $projetRepository->findAll();

@@ -14,13 +14,16 @@ class Projet
     private $id;
 
     #[ORM\Column(type: 'string', length: 100)]
-    private $nom_projet;
+    private $nomprojet;
 
     #[ORM\Column(type: 'string', length: 255)]
     private $img;
 
     #[ORM\Column(type: 'text')]
     private $description;
+
+    #[ORM\Column(type: 'string', length: 255, nullable: true)]
+    private $link;
 
     public function getId(): ?int
     {
@@ -29,12 +32,12 @@ class Projet
 
     public function getNomProjet(): ?string
     {
-        return $this->nom_projet;
+        return $this->nomprojet;
     }
 
-    public function setNomProjet(string $nom_projet): self
+    public function setNomProjet(string $nomprojet): self
     {
-        $this->nom_projet = $nom_projet;
+        $this->nomprojet = $nomprojet;
 
         return $this;
     }
@@ -59,6 +62,18 @@ class Projet
     public function setDescription(string $description): self
     {
         $this->description = $description;
+
+        return $this;
+    }
+
+    public function getLink(): ?string
+    {
+        return $this->link;
+    }
+
+    public function setLink(?string $link): self
+    {
+        $this->link = $link;
 
         return $this;
     }
